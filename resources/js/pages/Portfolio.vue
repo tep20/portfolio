@@ -27,7 +27,7 @@
         <header><h2 class="h2 article-title">About me</h2></header>
         <section class="about-text">
           <p>Saya seorang mahasiswa Sistem Informasi di Universitas Pamulang yang fokus mengembangkan karier profesional di bidang teknologi, khususnya pengembangan web, rekayasa perangkat lunak, dan analisis data.</p>
-          <p>Mengombinasikan pemahaman logika sistem dan pemecahan masalah secara terstruktur, saya berdedidasi membangun solusi digital yang fungsional, efisien, dan berdampak positif bagi operasional bisnis.</p>
+          <p>Mengombinasikan pemahaman logika sistem dan pemecahan masalah secara terstruktur, saya berdedikasi membangun solusi digital yang fungsional, efisien, dan berdampak positif bagi operasional bisnis.</p>
         </section>
 
         <section class="service">
@@ -53,23 +53,10 @@
             </li>
           </ul>
         </section>
-
-        <section class="clients">
-          <h3 class="h3 clients-title">Clients</h3>
-          <ul class="clients-list has-scrollbar">
-            <li class="clients-item"><a href="#"><img src="https://i.postimg.cc/YqfKyG66/logo-1-color.png" alt="logo"></a></li>
-            <li class="clients-item"><a href="#"><img src="https://i.postimg.cc/fWm6JtgG/logo-2-color.png" alt="logo"></a></li>
-            <li class="clients-item"><a href="#"><img src="https://i.postimg.cc/Bb07xpwd/logo-3-color.png" alt="logo"></a></li>
-            <li class="clients-item"><a href="#"><img src="https://i.postimg.cc/hv1yMmkh/logo-4-color.png" alt="logo"></a></li>
-            <li class="clients-item"><a href="#"><img src="https://i.postimg.cc/ry1P86Dc/logo-5-color.png" alt="logo"></a></li>
-            <li class="clients-item"><a href="#"><img src="https://i.postimg.cc/SsWDN8NV/logo-6-color.png" alt="logo"></a></li>
-          </ul>
-        </section>
       </article>
 
       <article class="resume" :class="{ active: activePage === 'resume' }">
         <header><h2 class="h2 article-title">Resume</h2></header>
-        
         <section class="timeline">
           <div class="title-wrapper">
             <div class="icon-box"><ion-icon name="book-outline"></ion-icon></div>
@@ -172,9 +159,10 @@
 
       <article class="contact" :class="{ active: activePage === 'contact' }">
         <header><h2 class="h2 article-title">Contact</h2></header>
+        
         <section class="mapbox">
           <figure>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d199666.5651251294!2d21.0122287!3d52.2296756!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471ecc669a869f01%3A0x72f0c8b6d7c0b8b!2sWarsaw%2C%20Poland!5e0!3m2!1sen!2spl!4v1647608789441!5m2!1sen!2spl" width="400" height="300" loading="lazy"></iframe>
+            <iframe src="https://maps.google.com/maps?q=Cirendeu,%20Ciputat%20Timur,%20Tangerang%20Selatan&t=&z=14&ie=UTF8&iwloc=&output=embed" width="100%" height="380" loading="lazy"></iframe>
           </figure>
         </section>
 
@@ -200,34 +188,31 @@
 <script setup>
 import { ref, computed } from 'vue';
 
-// State Navigasi Tab Utama
 const activePage = ref('about');
 const setActivePage = (page) => { 
   activePage.value = page; 
   window.scrollTo(0, 0);
 };
 
-// State Penyaringan Komponen Kategori Portofolio
 const activeCategory = ref('all');
 const isSelectDropdownActive = ref(false);
-const categories = ['all', 'web development', 'data science', 'ui/ux'];
 
-// Array Data Project Utama Kamu
+// 4. HAPUS KATEGORI UI/UX (Hanya menyisakan kategori yang valid)
+const categories = ['all', 'web development', 'data science'];
+
+// 5. HAPUS DATA PROJECT UI/UX
 const projects = ref([
   { title: 'Laravel Web Application', category: 'web development', image: '/storage/images/project-1.jpg' },
   { title: 'Automated Trading Bot Platform', category: 'web development', image: '/storage/images/project-2.png' },
   { title: 'Advanced Web Scraping Engine', category: 'data science', image: '/storage/images/project-3.jpg' },
-  { title: 'Business Data Analysis Dashboard', category: 'data science', image: '/storage/images/project-4.png' },
-  { title: 'Interactive Interface Design', category: 'ui/ux', image: '/storage/images/project-5.png' }
+  { title: 'Business Data Analysis Dashboard', category: 'data science', image: '/storage/images/project-4.png' }
 ]);
 
-// Logika Fungsi Filter Pencarian Proyek
 const filteredProjects = computed(() => {
   if (activeCategory.value === 'all') return projects.value;
   return projects.value.filter(p => p.category === activeCategory.value);
 });
 
-// State Validasi Kontak Formulir
 const formData = ref({ name: '', email: '', message: '' });
 const isFormDisabled = ref(true);
 const validateForm = (e) => {

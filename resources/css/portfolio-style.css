@@ -742,9 +742,12 @@ textarea.form-input {
         position: absolute;
         bottom: auto;
         top: 0;
-        right: 0;
+        right: 0;         /* Mengunci posisi nempel di sebelah kanan */
+        left: auto;        /* Membebaskan ruang sisi kiri navigasi */
         width: max-content;
         border-radius: 0 20px;
+        padding: 0 20px;
+        box-shadow: none;
     }
     .project-list { grid-template-columns: repeat(3, 1fr); }
     .service-list { grid-template-columns: 1fr 1fr; }

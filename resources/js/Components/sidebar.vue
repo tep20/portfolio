@@ -1,8 +1,8 @@
 <template>
   <aside class="sidebar" :class="{ active: isSidebarActive }">
-    <div class="sidebar-info">
+    <div class="sidebar-info-wrapper">
       <figure class="avatar-box">
-        <img src="storageimages/profile 1.jpeg" alt="Tito Esha Praditya" width="80">
+        <img src="/storage/images/profile 1.jpeg" alt="Tito Esha Praditya" width="150">
       </figure>
 
       <div class="info-content">
@@ -19,7 +19,6 @@
     <div class="sidebar-info-more">
       <div class="separator"></div>
       <ul class="contacts-list">
-        <!-- Item Kontak dimasukkan di sini (Email, Phone, Location, dll) -->
         <li class="contact-item">
           <div class="icon-box"><ion-icon name="mail-outline"></ion-icon></div>
           <div class="contact-info">
@@ -27,12 +26,42 @@
             <a href="mailto:titoesha2@gmail.com" class="contact-link">titoesha2@gmail.com</a>
           </div>
         </li>
+        
+        <li class="contact-item">
+          <div class="icon-box"><ion-icon name="logo-whatsapp"></ion-icon></div>
+          <div class="contact-info">
+            <p class="contact-title">Whatsapp</p>
+            <a href="https://wa.me/628129577446" target="_blank" class="contact-link">08129577446</a>
+          </div>
+        </li>
+
+        <li class="contact-item">
+          <div class="icon-box"><ion-icon name="location-outline"></ion-icon></div>
+          <div class="contact-info">
+            <p class="contact-title">Location</p>
+            <address>Cirendeu, Tangerang Selatan</address>
+          </div>
+        </li>
       </ul>
+      
       <div class="separator"></div>
+      
       <ul class="social-list">
-        <li class="social-item"><a href="#" class="social-link"><ion-icon name="logo-facebook"></ion-icon></a></li>
-        <li class="social-item"><a href="#" class="social-link"><ion-icon name="logo-twitter"></ion-icon></a></li>
-        <li class="social-item"><a href="#" class="social-link"><ion-icon name="logo-instagram"></ion-icon></a></li>
+        <li class="social-item">
+          <a href="https://facebook.com/tito esha praditya" target="_blank" class="social-link">
+            <ion-icon name="logo-facebook"></ion-icon>
+          </a>
+        </li>
+        <li class="social-item">
+          <a href="https://twitter.com/titoesha" target="_blank" class="social-link">
+            <ion-icon name="logo-twitter"></ion-icon>
+          </a>
+        </li>
+        <li class="social-item">
+          <a href="https://instagram.com/titoeshaa" target="_blank" class="social-link">
+            <ion-icon name="logo-instagram"></ion-icon>
+          </a>
+        </li>
       </ul>
     </div>
   </aside>
