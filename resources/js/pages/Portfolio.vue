@@ -53,6 +53,18 @@
             </li>
           </ul>
         </section>
+
+        <section class="clients">
+          <h3 class="h3 clients-title">Clients</h3>
+          <ul class="clients-list has-scrollbar">
+            <li class="clients-item"><a href="#"><img src="https://i.postimg.cc/YqfKyG66/logo-1-color.png" alt="logo"></a></li>
+            <li class="clients-item"><a href="#"><img src="https://i.postimg.cc/fWm6JtgG/logo-2-color.png" alt="logo"></a></li>
+            <li class="clients-item"><a href="#"><img src="https://i.postimg.cc/Bb07xpwd/logo-3-color.png" alt="logo"></a></li>
+            <li class="clients-item"><a href="#"><img src="https://i.postimg.cc/hv1yMmkh/logo-4-color.png" alt="logo"></a></li>
+            <li class="clients-item"><a href="#"><img src="https://i.postimg.cc/ry1P86Dc/logo-5-color.png" alt="logo"></a></li>
+            <li class="clients-item"><a href="#"><img src="https://i.postimg.cc/SsWDN8NV/logo-6-color.png" alt="logo"></a></li>
+          </ul>
+        </section>
       </article>
 
       <article class="resume" :class="{ active: activePage === 'resume' }">
@@ -162,7 +174,14 @@
         
         <section class="mapbox">
           <figure>
-            <iframe src="https://maps.google.com/maps?q=Cirendeu,%20Ciputat%20Timur,%20Tangerang%20Selatan&t=&z=14&ie=UTF8&iwloc=&output=embed" width="100%" height="380" loading="lazy"></iframe>
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15862.032646698188!2d106.75782785!3d-6.3281488!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69eff623048929%3A0x67cf9be92a34493e!2sCirendeu%2C%20Ciputat%20Tim.%2C%20Kota%20Tangerang%20Selatan%2C%20Banten!5e0!3m2!1sid!2sid!4v1716462000000!5m2!1sid!2sid" 
+              width="100%" 
+              height="380" 
+              loading="lazy"
+              style="border:0;"
+              allowfullscreen=""
+            ></iframe>
           </figure>
         </section>
 
@@ -197,10 +216,10 @@ const setActivePage = (page) => {
 const activeCategory = ref('all');
 const isSelectDropdownActive = ref(false);
 
-// 4. HAPUS KATEGORI UI/UX (Hanya menyisakan kategori yang valid)
+// KATEGORI UI/UX HAPUS (Hanya menyisakan Keahlian Utama Kamu)
 const categories = ['all', 'web development', 'data science'];
 
-// 5. HAPUS DATA PROJECT UI/UX
+// DATA PROJECT UI/UX HAPUS
 const projects = ref([
   { title: 'Laravel Web Application', category: 'web development', image: '/storage/images/project-1.jpg' },
   { title: 'Automated Trading Bot Platform', category: 'web development', image: '/storage/images/project-2.png' },
