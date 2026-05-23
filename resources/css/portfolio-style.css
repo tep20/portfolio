@@ -229,11 +229,18 @@ article.active {
 .avatar-box {
     background: var(--bg-gradient-onyx);
     border-radius: 30px;
-    box-shadow: none !important;
+    padding: 0;
+    margin: 0 auto;
+    box-shadow: none !important; /* Mematikan sisa bayangan pembungkus */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .avatar-box img {
+    display: block;
     border-radius: inherit;
-    box-shadow: none !important; 
+    box-shadow: none !important; /* Menjamin foto bersih tanpa shadow samping */
+    object-fit: cover;
 }
 .name-center {
     color: var(--white2);
@@ -788,7 +795,16 @@ textarea.form-input {
         height: 100%; 
         padding-top: 40px; 
     }
-    .sidebar-info {display: flex; flex-direction: column; align-items: center; text-align: center; gap: 20px; }
+    .sidebar-info {
+    position: relative;
+    display: flex;
+    flex-direction: column; /* Membuat foto dan teks tersusun vertikal ke bawah */
+    justify-content: center; /* Memastikan semua elemen berada di tengah-tengah */
+    align-items: center;    /* Menjaga keseimbangan sejajar di tengah */
+    gap: 15px;
+    width: 100%;
+    text-align: center;
+}        
     .info-more-btn { display: none; }
     .contacts-list { grid-template-columns: 1fr; }
     .social-list { justify-content: center; }

@@ -160,15 +160,16 @@
       <article class="contact" :class="{ active: activePage === 'contact' }">
         <header><h2 class="h2 article-title">Contact</h2></header>
         
-        <section class="mapbox">
+      <section class="mapbox">
           <figure>
             <iframe 
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1m4!2sCirendeu!3m2!1d-6.3056!2d106.7725!4m5!1s0x2e69f0254cb6c5ab%3A0x7fe3438e3e4a273b!2sCirendeu%2C%20Ciputat%20Timur%2C%20Tangerang%20Selatan%20City%2C%20Banten!3m2!1d-6.3117565!2d106.7711202!5e0!3m2!1sid!2sid!4v1716480000000!5m2!1sid!2sid" 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15862.483983375887!2d106.7645171!3d-6.3134112!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69eff77364b49b%3A0x6b24505f9d1469e7!2sCirendeu%2C%20Ciputat%20Timur%2C%20Tangerang%20Selatan%2C%20Banten!5e0!3m2!1sid!2sid!4v1716462000000!5m2!1sid!2sid"
               width="100%" 
               height="380" 
               loading="lazy"
               style="border:0;"
               allowfullscreen=""
+              referrerpolicy="no-referrer-when-downgrade"
             ></iframe>
           </figure>
         </section>
