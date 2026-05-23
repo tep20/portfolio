@@ -5,9 +5,9 @@
         <img src="/storage/images/profile 1.jpeg" alt="Tito Esha Praditya" width="150">
       </figure>
 
-      <div class="info-content">
-        <h1 class="name" title="Tito Esha Praditya">Tito Esha Praditya</h1>
-        <p class="title">Web Developer</p>
+      <div class="info-content text-center">
+        <h1 class="name-center" title="Tito Esha Praditya">Tito Esha Praditya</h1>
+        <p class="title-center">Web Developer</p>
       </div>
 
       <button class="info-more-btn" @click="toggleSidebar">
@@ -70,7 +70,5 @@
 <script setup>
 import { ref } from 'vue';
 const isSidebarActive = ref(false);
-const toggleSidebar = () => {
-  isSidebarActive.value = !isSidebarActive.value;
-};
+const toggleSidebar = () => { isSidebarActive.value = !isSidebarActive.value; };
 </script>

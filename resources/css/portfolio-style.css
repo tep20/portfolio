@@ -228,7 +228,20 @@ article.active {
 
 .avatar-box {
     background: var(--bg-gradient-onyx);
-    border-radius: 20px;
+    border-radius: 30px;
+    box-shadow: none !important;
+}
+.avatar-box img {
+    border-radius: inherit;
+    box-shadow: none !important; 
+}
+.name-center {
+    color: var(--white2);
+    font-size: var(--fs3);
+    font-weight: var(--fw500);
+    letter-spacing: -0.25px;
+    margin-bottom: 10px;
+    text-align: center;
 }
 
 .info-content .name {
@@ -237,6 +250,17 @@ article.active {
     font-weight: var(--fw500);
     letter-spacing: -0.25px;
     margin-bottom: 10px;
+}
+
+.title-center {
+    color: var(--white1);
+    background: var(--onyx);
+    font-size: var(--fs8);
+    font-weight: var(--fw300);
+    width: max-content;
+    padding: 5px 12px;
+    border-radius: 8px;
+    margin: 0 auto; /* Menjaga badge sub-judul tetap di tengah */
 }
 
 .info-content .title {
@@ -764,7 +788,7 @@ textarea.form-input {
         height: 100%; 
         padding-top: 40px; 
     }
-    .sidebar-info { flex-direction: column; text-align: center; }
+    .sidebar-info {display: flex; flex-direction: column; align-items: center; text-align: center; gap: 20px; }
     .info-more-btn { display: none; }
     .contacts-list { grid-template-columns: 1fr; }
     .social-list { justify-content: center; }
