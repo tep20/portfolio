@@ -27,7 +27,7 @@
         <header><h2 class="h2 article-title">About me</h2></header>
         <section class="about-text">
           <p>Saya seorang mahasiswa Sistem Informasi di Universitas Pamulang yang fokus mengembangkan karier profesional di bidang teknologi, khususnya pengembangan web, rekayasa perangkat lunak, dan analisis data.</p>
-          <p>Mengombinasikan pemahaman logika sistem dan pemecahan masalah secara terstruktur, saya berdedikasi membangun solusi digital yang fungsional, efisien, dan berdampak positif bagi operasional bisnis.</p>
+          <p>Mengombinasikan pemahaman logika sistem dan pemecahan masalah secara terstruktur, saya berdedidasi membangun solusi digital yang fungsional, efisien, dan berdampak positif bagi operasional bisnis.</p>
         </section>
 
         <section class="service">
