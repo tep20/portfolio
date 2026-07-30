@@ -35,7 +35,7 @@ hjyu  <main>
           <ul class="service-list">
             <li class="service-item">
               <div class="service-icon-box">
-                <img src="/storage/images/icon-coding.png" alt="icon" width="40">
+                <img src="/storage/images/icon-coding.png" alt="icon" width="60">
               </div>
               <div class="service-content-box">
                 <h4 class="h4 service-item-title">Web Development</h4>
@@ -44,7 +44,7 @@ hjyu  <main>
             </li>
             <li class="service-item">
               <div class="service-icon-box">
-                <img src="/storage/images/icon-data-analysis.png" alt="icon" width="40">
+                <img src="/storage/images/icon-data-analyst.png" alt="icon" width="60">
               </div>
               <div class="service-content-box">
                 <h4 class="h4 service-item-title">Data Analysis & Scraping</h4>
@@ -91,16 +91,16 @@ hjyu  <main>
             <li class="skills-item">
               <div class="title-wrapper">
                 <h5 class="h5">Web Development</h5>
-                <data value="85">85%</data>
+                <data value="90">90%</data>
               </div>
-              <div class="skills-progress-bg"><div class="skills-progress-fill" style="width: 85%;"></div></div>
+              <div class="skills-progress-bg"><div class="skills-progress-fill" style="width: 90%;"></div></div>
             </li>
             <li class="skills-item">
               <div class="title-wrapper">
                 <h5 class="h5">Data Analysis & Scraping</h5>
-                <data value="80">80%</data>
+                <data value="70">70%</data>
               </div>
-              <div class="skills-progress-bg"><div class="skills-progress-fill" style="width: 80%;"></div></div>
+              <div class="skills-progress-bg"><div class="skills-progress-fill" style="width: 70%;"></div></div>
             </li>
           </ul>
         </section>
@@ -149,7 +149,7 @@ hjyu  <main>
         <section class="about-text">
           <p>Kamu bisa melihat riwayat hidup, kualifikasi teknis, serta detail pencapaian akademis dan profesional milikku secara lengkap melalui berkas digital di bawah ini.</p>
           <div class="cv-action-wrapper">
-            <a href="/storage/cv-tito-new.pdf" download class="form-btn text-center">
+            <a href="/storage/CV-TITO-new.pdf" download class="form-btn text-center">
               <ion-icon name="download-outline"></ion-icon>
               <span>Unduh Berkas PDF</span>
             </a>
@@ -207,10 +207,9 @@ const isSelectDropdownActive = ref(false);
 const categories = ['all', 'web development', 'data science'];
 
 const projects = ref([
-  { title: 'Laravel Web Application', category: 'web development', image: '/storage/images/coding.jpg' },
-  { title: 'Automated Trading Bot Platform', category: 'web development', image: '/storage/images/project-2.png' },
-  { title: 'Advanced Web Scraping Engine', category: 'data science', image: '/storage/images/project-3.jpg' },
-  { title: 'Business Data Analysis Dashboard', category: 'data science', image: '/storage/images/project-4.png' }
+  { title: 'Laravel Web Application', category: 'web development', image: '/storage/images/coding.png' },
+  { title: 'Web Scraping Engine', category: 'data science', image: '/storage/images/scrapping.png' },
+  { title: 'Business Data Analysis Dashboard', category: 'data science', image: '/storage/images/data-analysis.jpg' }
 ]);
 
 const filteredProjects = computed(() => {
