@@ -31,7 +31,7 @@ hjyu  <main>
         </section>
 
         <section class="service">
-          <h3 class="h3 service-title">What I'm doing</h3>
+          <h3 class="h3 service-title">Keahlian</h3>
           <ul class="service-list">
             <li class="service-item">
               <div class="service-icon-box">
@@ -44,7 +44,7 @@ hjyu  <main>
             </li>
             <li class="service-item">
               <div class="service-icon-box">
-                <img src="/storage/images/icon-data-analyst.png" alt="icon" width="60">
+                <img src="/storage/images/scrapping.png" alt="icon" width="60">
               </div>
               <div class="service-content-box">
                 <h4 class="h4 service-item-title">Data Analysis & Scraping</h4>
@@ -149,7 +149,7 @@ hjyu  <main>
         <section class="about-text">
           <p>Kamu bisa melihat riwayat hidup, kualifikasi teknis, serta detail pencapaian akademis dan profesional milikku secara lengkap melalui berkas digital di bawah ini.</p>
           <div class="cv-action-wrapper">
-            <a href="/storage/CV-TITO-new.pdf" download class="form-btn text-center">
+            <a href="/public/assets/doc/CV TITO new.pdf" download class="form-btn text-center">
               <ion-icon name="download-outline"></ion-icon>
               <span>Unduh Berkas PDF</span>
             </a>
@@ -209,7 +209,7 @@ const categories = ['all', 'web development', 'data science'];
 const projects = ref([
   { title: 'Laravel Web Application', category: 'web development', image: '/storage/images/coding.png' },
   { title: 'Web Scraping Engine', category: 'data science', image: '/storage/images/scrapping.png' },
-  { title: 'Business Data Analysis Dashboard', category: 'data science', image: '/storage/images/data-analysis.jpg' }
+  { title: 'Business Data Analysis Dashboard', category: 'data science', image: '/storage/images/data_analysis.jpg' }
 ]);
 
 const filteredProjects = computed(() => {
