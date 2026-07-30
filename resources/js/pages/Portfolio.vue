@@ -149,7 +149,7 @@ hjyu  <main>
         <section class="about-text">
           <p>Kamu bisa melihat riwayat hidup, kualifikasi teknis, serta detail pencapaian akademis dan profesional milikku secara lengkap melalui berkas digital di bawah ini.</p>
           <div class="cv-action-wrapper">
-            <a href="/public/assets/doc/CV TITO new.pdf" download class="form-btn text-center">
+            <a href="/assets/doc/CV%20TITO%20new.pdf" download class="form-btn text-center">
               <ion-icon name="download-outline"></ion-icon>
               <span>Unduh Berkas PDF</span>
             </a>
