@@ -1,5 +1,5 @@
 <template>
-  <main>
+hjyu  <main>
     <Sidebar />
 
     <div class="main-content">
@@ -35,7 +35,7 @@
           <ul class="service-list">
             <li class="service-item">
               <div class="service-icon-box">
-                <img src="https://i.postimg.cc/ZqgqrqzG/icon-dev.png" alt="icon" width="40">
+                <img src="/storage/images/icon-coding.png" alt="icon" width="40">
               </div>
               <div class="service-content-box">
                 <h4 class="h4 service-item-title">Web Development</h4>
@@ -44,7 +44,7 @@
             </li>
             <li class="service-item">
               <div class="service-icon-box">
-                <img src="https://i.postimg.cc/4389jZkP/icon-design.png" alt="icon" width="40">
+                <img src="/storage/images/icon-data-analysis.png" alt="icon" width="40">
               </div>
               <div class="service-content-box">
                 <h4 class="h4 service-item-title">Data Analysis & Scraping</h4>
@@ -207,7 +207,7 @@ const isSelectDropdownActive = ref(false);
 const categories = ['all', 'web development', 'data science'];
 
 const projects = ref([
-  { title: 'Laravel Web Application', category: 'web development', image: '/storage/images/project-1.jpg' },
+  { title: 'Laravel Web Application', category: 'web development', image: '/storage/images/coding.jpg' },
   { title: 'Automated Trading Bot Platform', category: 'web development', image: '/storage/images/project-2.png' },
   { title: 'Advanced Web Scraping Engine', category: 'data science', image: '/storage/images/project-3.jpg' },
   { title: 'Business Data Analysis Dashboard', category: 'data science', image: '/storage/images/project-4.png' }

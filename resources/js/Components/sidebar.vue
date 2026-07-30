@@ -58,7 +58,7 @@
           </a>
         </li>
         <li class="social-item">
-          <a href="https://instagram.com/titoeshaa" target="_blank" class="social-link">
+          <a href="https://instagram.com/tito esha praditya" target="_blank" class="social-link">
             <ion-icon name="logo-instagram"></ion-icon>
           </a>
         </li>
