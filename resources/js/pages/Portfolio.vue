@@ -1,5 +1,5 @@
 <template>
-hjyu  <main>
+  <main>
     <Sidebar />
 
     <div class="main-content">
@@ -147,7 +147,7 @@ hjyu  <main>
       <article class="blog" :class="{ active: activePage === 'download cv' }">
         <header><h2 class="h2 article-title">Download CV</h2></header>
         <section class="about-text">
-          <p>Kamu bisa melihat riwayat hidup, kualifikasi teknis, serta detail pencapaian akademis dan profesional milikku secara lengkap melalui berkas digital di bawah ini.</p>
+          <p>Kamu bisa melihat riwayat hidup, kualifikasi teknis, serta detail pencapaian akademis and profesional milikku secara lengkap melalui berkas digital di bawah ini.</p>
           <div class="cv-action-wrapper">
             <a href="/assets/doc/CV%20TITO%20new.pdf" download class="form-btn text-center">
               <ion-icon name="download-outline"></ion-icon>
@@ -160,7 +160,7 @@ hjyu  <main>
       <article class="contact" :class="{ active: activePage === 'contact' }">
         <header><h2 class="h2 article-title">Contact</h2></header>
         
-      <section class="mapbox">
+        <section class="mapbox">
           <figure>
             <iframe 
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15862.483983375887!2d106.7645171!3d-6.3134112!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69eff77364b49b%3A0x6b24505f9d1469e7!2sCirendeu%2C%20Ciputat%20Timur%2C%20Tangerang%20Selatan%2C%20Banten!5e0!3m2!1sid!2sid!4v1716462000000!5m2!1sid!2sid"
@@ -176,12 +176,13 @@ hjyu  <main>
 
         <section class="contact-form">
           <h3 class="h3 form-title">Contact Form</h3>
-          <form @input="validateForm" class="form">
+          <!-- FIX: Menambahkan aksi submit.prevent yang memicu fungsi kirim data Inertia -->
+          <form @submit.prevent="submitMessage" @input="validateForm" class="form">
             <div class="input-wrapper">
-              <input type="text" v-model="formData.name" class="form-input" placeholder="Full name" required>
-              <input type="email" v-model="formData.email" class="form-input" placeholder="Email Address" required>
+              <input type="text" v-model="form.name" class="form-input" placeholder="Full name" required>
+              <input type="email" v-model="form.email" class="form-input" placeholder="Email Address" required>
             </div>
-            <textarea v-model="formData.message" class="form-input" placeholder="Your Message" required></textarea>
+            <textarea v-model="form.message" class="form-input" placeholder="Your Message" required></textarea>
             <button class="form-btn" type="submit" :disabled="isFormDisabled">
               <ion-icon name="paper-plane"></ion-icon>
               <span>Send Message</span>
@@ -195,6 +196,8 @@ hjyu  <main>
 
 <script setup>
 import { ref, computed } from 'vue';
+// FIX: Mengubah rute folder library import ke versi paket Inertia Core v1 terbaru
+import { useForm } from '@inertiajs/vue3';
 
 const activePage = ref('about');
 const setActivePage = (page) => { 
@@ -217,9 +220,26 @@ const filteredProjects = computed(() => {
   return projects.value.filter(p => p.category === activeCategory.value);
 });
 
-const formData = ref({ name: '', email: '', message: '' });
+// Tetap mempertahankan validasi form input HTML asli
 const isFormDisabled = ref(true);
 const validateForm = (e) => {
   isFormDisabled.value = !e.currentTarget.checkValidity();
+};
+
+// Pengikatan data form dinamis disatukan ke objek internal useForm Inertia
+const form = useForm({
+  name: '',
+  email: '',
+  message: '',
+});
+
+const submitMessage = () => {
+  form.post(route('message.send'), {
+    preserveScroll: true,
+    onSuccess: () => {
+      form.reset();
+      alert('Pesan milikmu sukses terkirim ke Tito!');
+    },
+  });
 };
 </script>

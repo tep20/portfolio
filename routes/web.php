@@ -6,3 +6,4 @@ use Illuminate\Support\Facades\Route;
 
 // Mengarahkan URL utama langsung ke Controller Portfolio
 Route::get('/', [PortfolioController::class, 'index']);
+Route::post('/send-message', [PortfolioController::class, 'sendMessage'])->name('message.send');
